@@ -1,0 +1,142 @@
+﻿@model SW3TR2.Models.Caso
+
+@{
+    ViewBag.Title = "Detalhes do Caso de Teste";
+    Layout = "~/Views/Shared/_Template.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">Detalhes do Caso de Teste</div>
+    <div class="panel-body">
+        <div>
+            <h4>Caso</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Plano.Nome)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Plano.Nome)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Descricao)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PreCondicoes)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PreCondicoes)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Passos)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Passos)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PosCondicoes)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PosCondicoes)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Prioridade)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Prioridade)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Execucao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Execucao)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Versao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Versao)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Emissao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Emissao)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Prazo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Prazo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Fechamento)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Fechamento)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Automatizado)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Automatizado)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Observacoes)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Observacoes)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+    <div class="panel-footer">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Id }, htmlAttributes: new { @class = "btn btn-primary"})
+        @Html.ActionLink("Voltar aos Casos de Teste", "Index", null, htmlAttributes: new { @class = "btn btn-warning" })
+    </div>
+</div>

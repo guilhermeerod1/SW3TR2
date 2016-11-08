@@ -1,0 +1,38 @@
+﻿@model SW3TR2.Models.Projeto
+
+@{
+    ViewBag.Title = "Detalhes do Projeto";
+    Layout = "~/Views/Shared/_Template.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Detalhes do Projeto</strong></div>
+    <div class="panel-body">
+        <div>
+            <h4>Projeto</h4>
+            <hr />
+            <dl class="dl-horizontal">
+
+                <dt>Nome:</dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+
+                <dt>Descrição:</dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Descricao)
+                </dd>
+
+                <dt>Emissão:</dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Emissao)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+    <div class="panel-footer">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Id }, htmlAttributes: new { @class = "btn btn-warning" })
+        @Html.ActionLink("Projetos", "Index", null, htmlAttributes: new { @class = "btn btn-primary" })
+    </div>
+</div>

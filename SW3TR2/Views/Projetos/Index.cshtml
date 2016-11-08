@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SW3TR2.Models.Projeto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Template.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">Projetos</div>
+    <div class="panel-body">
+        <table class="table table-responsive table-hover">
+            <tr>
+                <th>Identificador</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Emissão</th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Emissao)</td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Detalhes", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Excluir", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="panel-footer">
+        @Html.ActionLink("Novo", "Create", null, htmlAttributes: new { @class = "btn btn-primary"})
+    </div>
+</div>

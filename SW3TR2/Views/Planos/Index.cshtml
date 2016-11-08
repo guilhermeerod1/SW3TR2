@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SW3TR2.Models.Plano>
+
+@{
+    ViewBag.Title = "Planos de Teste";
+    Layout = "~/Views/Shared/_Template.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">Planos de Teste</div>
+    <div class="panel-body">
+        <table class="table table-responsive table-hover">
+            <tr>
+                <th>Projeto</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Status</th>
+                <th>Prioridade</th>
+                <th>Emissão</th>
+                <th>Prazo</th>
+                <th>Fechamento</th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Projeto.Nome)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Prioridade)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Emissao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Prazo)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Fechamento)</td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Detalhes", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Excluir", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="panel-footer">
+        @Html.ActionLink("Novo Plano de Teste", "Create", null, htmlAttributes: new { @class = "btn btn-primary"})
+    </div>
+</div>
+

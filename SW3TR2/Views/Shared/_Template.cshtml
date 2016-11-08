@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <header class="jumbotron">
+            <h3>SW3TR2</h3>
+            <h5>Sistema para gestão de testes</h5>            
+        </header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="~/Home">Principal</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="~/Projetos">Projetos de Teste</a></li>
+                    <li><a href="~/Planos">Planos de Teste</a></li>
+                    <li><a href="~/Casos">Casos de Teste</a></li>
+                </ul>
+            </div>            
+        </nav>
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+    @RenderSection("ScriptPage", false)
+</body>
+</html>
